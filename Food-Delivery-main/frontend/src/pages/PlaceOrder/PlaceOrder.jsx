@@ -41,7 +41,8 @@ const PlaceOrder = () => {
     let orderData = {
       address: data,
       items: orderItems,
-      amount: getTotalCartAmount() + 2,
+      // Yahan bhi 2 ki jagah 40 kar diya taaki backend se match ho jaye
+      amount: getTotalCartAmount() + 40,
     };
     
     let response= await axios.post(url+"/api/order/place",orderData,{headers:{token}});
@@ -63,6 +64,7 @@ const PlaceOrder = () => {
       navigate("/cart")
     }
   },[token])
+  
   return (
     <form className="place-order" onSubmit={placeOrder}>
       <div className="place-order-left">
@@ -152,18 +154,20 @@ const PlaceOrder = () => {
           <div>
             <div className="cart-total-details">
               <p>Subtotals</p>
-              <p>${getTotalCartAmount()}</p>
+              <p>₹{getTotalCartAmount()}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <p>Delivery Fee</p>
-              <p>${getTotalCartAmount() === 0 ? 0 : 2}</p>
+              {/* Delivery fee update kar di */}
+              <p>₹{getTotalCartAmount() === 0 ? 0 : 40}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <b>Total</b>
               <b>
-                ${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}
+                {/* Total update kar diya */}
+                ₹{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 40}
               </b>
             </div>
           </div>

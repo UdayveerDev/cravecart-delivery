@@ -8,8 +8,9 @@ const userSchema = new mongoose.Schema(
     role: { type: String, default:"user" },
     cartData: { type: Object, default: {} },
   },
-  { minimize: false }
+  { minimize: false } // Yeh bohot mast catch hai! 🏆
 );
 
-const userModel = mongoose.model.user || mongoose.model("user", userSchema);
+// Yahan mongoose.model.user ki jagah mongoose.models.user kar diya gaya hai
+const userModel = mongoose.models.user || mongoose.model("user", userSchema);
 export default userModel;

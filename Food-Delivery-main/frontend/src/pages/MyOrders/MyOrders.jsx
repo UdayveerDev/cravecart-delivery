@@ -24,24 +24,26 @@ const MyOrders = () => {
       fetchOrders();
     }
   }, [token]);
+
   return (
     <div className="my-orders">
       <h2>Orders</h2>
       <div className="container">
         {data.map((order, index) => {
           return (
-            <div key={index} className="my-orders-order">
+            <div key={order._id || index} className="my-orders-order">
               <img src={assets.parcel_icon} alt="" />
               <p>
                 {order.items.map((item, index) => {
                   if (index === order.items.length - 1) {
                     return item.name + " X " + item.quantity;
                   } else {
-                    return item.name + " X " + item.quantity + ",";
+                    return item.name + " X " + item.quantity + ", ";
                   }
                 })}
               </p>
-              <p>${order.amount}.00</p>
+              {/* Dollar ko Rupee symbol mein badal diya */}
+              <p>₹{order.amount}.00</p>
               <p>items: {order.items.length}</p>
               <p>
                 <span>&#x25cf;</span>
