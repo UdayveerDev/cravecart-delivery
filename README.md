@@ -2,22 +2,30 @@
 
 A full-stack food ordering platform built with the MERN Stack. This project includes a complete user interface for customers and a dedicated admin dashboard for managing the menu and orders.
 
+### 🚀 Live Demo
+* **Frontend (Web App):** [https://cravecart-uday-pi.vercel.app](https://cravecart-uday-pi.vercel.app)
+* **Backend (API URL):** [https://cravecart-uday.onrender.com](https://cravecart-uday.onrender.com)
+
+---
+
 ## Features
 
 **User Panel**
-- Browse and filter food items by category
-- Add to cart and manage cart quantities
-- Secure Login & Signup with JWT authentication
-- Password hashing using Bcrypt
-- Checkout with Stripe payment integration
-- View and manage order history
+* Browse and filter food items by category
+* Add to cart and manage cart quantities
+* Secure Login & Signup with JWT authentication
+* Password hashing using Bcryptjs
+* Checkout with Stripe payment integration
+* View and manage order history
 
 **Admin Panel**
-- Dedicated secure login for administrators
-- Add and remove food items from the menu
-- Manage user orders and update delivery status
-- Image uploads handled via Multer
-- Role-based access control
+* Dedicated secure login for administrators
+* Add and remove food items from the menu
+* Manage user orders and update delivery status
+* Image uploads handled via Multer
+* Role-based access control
+
+---
 
 ## Screenshots
 
@@ -33,9 +41,11 @@ A full-stack food ordering platform built with the MERN Stack. This project incl
 ![Login](images/login.png)
 *Login Popup*
 
+---
+
 ## Run Locally
 
 Clone the project:
 ```bash
-git clone [https://github.com/UdayveerDev/CraveCart.git](https://github.com/UdayveerDev/CraveCart.git)
-cd CraveCart
+git clone [https://github.com/UdayveerDev/cravecart-delivery.git](https://github.com/UdayveerDev/cravecart-delivery.git)
+cd cravecart-delivery
